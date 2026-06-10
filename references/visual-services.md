@@ -2,6 +2,17 @@
 
 URL recipes for the battle-tested services this skill composes. All render natively in GitHub READMEs as plain `<img>` / markdown images. Only use a service when the fact it visualizes is real (see Hard Rules in SKILL.md).
 
+## Self-hosted hero SVG (preferred for the top banner)
+
+A hand-crafted animated SVG committed to the repo beats third-party banner services on every axis: ~2KB vs an external request, unique design vs a template look, and no uptime dependency. Start from `assets/hero-swiss-template.svg` (Swiss Grid style, HyperFrames design-guide lineage) and follow these rules:
+
+- **Self-contained**: CSS keyframes / SMIL only, no JS, no external fonts or images. SVG loaded via `<img>` (GitHub camo) cannot fetch ANY external resource; use system font stacks (`system-ui`, `ui-monospace`) and accept minor cross-platform variance.
+- **Readable at t=0**: text fully visible on the first frame; animation is ambient decoration (a traveling accent, a drawing line), never a fade-in reveal. Headless screenshots freeze SVG-in-img at frame 0, and so do some RSS readers.
+- **Facts in the artwork**: station labels, versions, commands in the hero must come from the ledger like any other claim.
+- **Namespace your classes** (e.g. `.hero-*`): if the SVG is ever inlined into an HTML page next to other SVGs, bare class names collide.
+- Reference it with a relative path: `<img src="assets/hero.svg" width="100%" alt="..."/>`. Keep an honest `alt`.
+- Extreme weight contrast (200 vs 800) per the HyperFrames design guide; one accent color; 880x220 viewBox renders crisply at GitHub's content width.
+
 ## capsule-render (gradient banner) — github.com/kyechan99/capsule-render
 
 ```text

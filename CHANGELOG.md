@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0] - 2026-06-11
+### Added
+- Self-hosted animated hero SVG guidance: new "Self-hosted hero SVG" cookbook section and `assets/hero-swiss-template.svg` (Swiss Grid style, HyperFrames design-guide lineage; ~2KB, zero third-party requests, readable at frame 0).
+
+### Changed
+- Own README hero switched from capsule-render + readme-typing-svg (two external services) to the self-hosted Swiss Grid SVG; footer simplified to match.
+
 ## [0.1.0] - 2026-06-10
 ### Added
 - Initial `repo-beautify` Agent Skill: verified-facts scan, two README style templates (classic / visual), visual services cookbook, structure and content-merge rules.

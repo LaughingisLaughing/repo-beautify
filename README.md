@@ -1,8 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:8B5CF6,50:6366F1,100:3B82F6&height=200&section=header&text=repo-beautify&fontSize=52&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Beautiful%20storefronts.%20Verified%20facts.%20No%20fake%20badges.&descSize=18&descAlignY=55" width="100%" alt="repo-beautify banner"/>
-
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&duration=3000&pause=800&color=6366F1&center=true&vCenter=true&width=640&lines=Facts+first%2C+then+content%2C+then+visuals;README+%E2%80%A2+badges+%E2%80%A2+topics+%E2%80%A2+social+preview;An+Agent+Skill+for+Claude+Code%2C+Codex+%26+friends" alt="Facts first, then content, then visuals"/>
+<img src="assets/hero.svg" width="100%" alt="repo-beautify: facts, content, visuals. Verified storefronts for GitHub repositories."/>
 
 <br/>
 
@@ -117,9 +115,9 @@ Use repo-beautify step 5 only: audit this repo's GitHub description, topics, man
 </a>
 </div>
 
-<div align="center">
+---
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:3B82F6,50:6366F1,100:8B5CF6&height=120&section=footer" width="100%" alt=""/>
+<div align="center">
 
 **MIT** © [LaughingisLaughing](https://github.com/LaughingisLaughing)
 

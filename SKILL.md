@@ -36,7 +36,7 @@ If the user has not chosen, EITHER ask with a one-line tradeoff summary, OR gene
 
 ### 3. Generate the README
 
-Read `references/visual-services.md` for exact URL recipes and pitfalls. Content rules:
+Read `references/visual-services.md` for exact URL recipes and pitfalls. For the top banner, prefer a self-hosted animated hero SVG (start from `assets/hero-swiss-template.svg`, ~2KB, zero third-party requests) over banner services; the cookbook's "Self-hosted hero SVG" section has the rules. Content rules:
 - Lead with the problem the project solves, concretely (a "before" snippet beats adjectives).
 - Quick Start uses the verified install command from the ledger, nothing else.
 - Mermaid diagram only when the project has real topology; derive nodes from the actual structure. GitHub renders ```mermaid natively.
