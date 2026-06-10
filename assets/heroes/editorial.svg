@@ -1,0 +1,34 @@
+<!-- repo-beautify hero template (editorial style).
+     Fill every {{PLACEHOLDER}}; {{KEY|default}} means replace with a value or keep the default.
+     Rules (see references/visual-services.md, Self-hosted hero SVG):
+     self-contained, system font stacks only, text readable at t=0, facts from the ledger,
+     wordmark sized for <=18 chars (shrink font-size for longer names), adjust x/cx offsets
+     to your text width after substitution. -->
+<svg viewBox="0 0 880 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{{ARIA_LABEL}}">
+  <style>
+    .ed-caps { font: 600 12px Georgia, 'Times New Roman', serif; fill: #6e6759; letter-spacing: 5px; }
+    .ed-title { font: 400 72px Georgia, 'Times New Roman', serif; fill: #1a1812; letter-spacing: -1px; }
+    .ed-italic { font: italic 400 20px Georgia, 'Times New Roman', serif; fill: #4d473c; letter-spacing: .5px; }
+    .ed-rule { stroke: #1a1812; stroke-width: 1; }
+    .ed-thick { stroke: #1a1812; stroke-width: 3; }
+    .ed-orn { fill: #b3372f; transform-origin: 440px 196px; animation: ed-turn 14s linear infinite; }
+    @keyframes ed-turn { to { transform: rotate(360deg); } }
+    .ed-grow { transform-origin: 440px 0; animation: ed-grow 2.4s cubic-bezier(.22,1,.36,1) forwards; }
+    @keyframes ed-grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  </style>
+
+  <rect width="880" height="220" fill="#faf7f0"/>
+
+  <line class="ed-thick" x1="64" y1="26" x2="816" y2="26"/>
+  <line class="ed-rule" x1="64" y1="32" x2="816" y2="32"/>
+
+  <text class="ed-caps" x="440" y="58" text-anchor="middle">{{TOP_CAPS}}</text>
+
+  <text class="ed-title" x="440" y="128" text-anchor="middle">{{TITLE}}</text>
+  <text class="ed-italic" x="440" y="160" text-anchor="middle">{{TAGLINE_ITALIC}}</text>
+
+  <line class="ed-rule ed-grow" x1="64" y1="182" x2="816" y2="182"/>
+
+  <!-- rotating asterisk ornament -->
+  <text class="ed-orn" x="440" y="204" text-anchor="middle" font-size="18">✱</text>
+</svg>

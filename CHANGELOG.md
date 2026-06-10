@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0] - 2026-06-11
+### Added
+- Hero style catalog: ten self-hosted animated SVG hero templates in `assets/heroes/` (swiss, aurora, vignelli, orbit, blueprint, brutalist, dotwave, editorial, outline, bauhaus), each with a branded preview in `assets/heroes/previews/` and a live gallery in the README.
+- Cookbook style-catalog table mapping each hero style to the project temperament it fits.
+
+### Changed
+- SKILL.md step 3 now points to the catalog and instructs letting the user pick a hero style by name.
+
+### Removed
+- `assets/hero-swiss-template.svg`, superseded by `assets/heroes/swiss.svg`.
+
 ## [0.2.0] - 2026-06-11
 ### Added
 - Self-hosted animated hero SVG guidance: new "Self-hosted hero SVG" cookbook section and `assets/hero-swiss-template.svg` (Swiss Grid style, HyperFrames design-guide lineage; ~2KB, zero third-party requests, readable at frame 0).

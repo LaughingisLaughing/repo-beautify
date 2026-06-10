@@ -1,0 +1,57 @@
+<!-- repo-beautify hero template (swiss style).
+     Fill every {{PLACEHOLDER}}; {{KEY|default}} means replace with a value or keep the default.
+     Rules (see references/visual-services.md, Self-hosted hero SVG):
+     self-contained, system font stacks only, text readable at t=0, facts from the ledger,
+     wordmark sized for <=18 chars (shrink font-size for longer names), adjust x/cx offsets
+     to your text width after substitution. -->
+<svg viewBox="0 0 880 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{{ARIA_LABEL}}">
+  <style>
+    .bg { fill: #f7f6f2; }
+    .grid { stroke: #e4e2da; stroke-width: 1; }
+    .rule { stroke: #16150f; stroke-width: 1.5; }
+    .wordlight { font: 200 64px system-ui, -apple-system, 'Segoe UI', sans-serif; fill: #16150f; letter-spacing: -1px; }
+    .wordheavy { font: 800 64px system-ui, -apple-system, 'Segoe UI', sans-serif; fill: #16150f; letter-spacing: -2px; }
+    .micro { font: 500 11px ui-monospace, 'SF Mono', Menlo, monospace; fill: #16150f; letter-spacing: 2.5px; }
+    .microdim { font: 500 11px ui-monospace, 'SF Mono', Menlo, monospace; fill: #98948a; letter-spacing: 2.5px; }
+    .dot { fill: #e8442e; }
+    .station { animation: hop 12s cubic-bezier(.65,0,.35,1) infinite; }
+    @keyframes hop {
+      0%, 26%   { transform: translateX(0px); }
+      33%, 59%  { transform: translateX(296px); }
+      66%, 93%  { transform: translateX(592px); }
+      100%      { transform: translateX(0px); }
+    }
+    .drawline { stroke-dasharray: 752; stroke-dashoffset: 752; animation: draw 2.2s cubic-bezier(.22,1,.36,1) forwards; }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+  </style>
+
+  <rect class="bg" width="880" height="220"/>
+
+  <!-- swiss grid -->
+  <line class="grid" x1="64" y1="0" x2="64" y2="220"/>
+  <line class="grid" x1="294" y1="0" x2="294" y2="220"/>
+  <line class="grid" x1="524" y1="0" x2="524" y2="220"/>
+  <line class="grid" x1="754" y1="0" x2="754" y2="220"/>
+  <line class="grid" x1="0" y1="40" x2="880" y2="40"/>
+
+  <!-- index -->
+  <text class="microdim" x="64" y="30">{{TOP_LEFT_LABEL}}</text>
+  <text class="microdim" x="754" y="30" text-anchor="start">{{TOP_RIGHT_LABEL}}</text>
+
+  <!-- wordmark: extreme weight contrast -->
+  <text x="62" y="124"><tspan class="wordlight">{{NAME_LIGHT}}</tspan><tspan class="wordheavy">{{NAME_HEAVY}}</tspan></text>
+
+  <!-- baseline rule draws in -->
+  <line class="rule drawline" x1="64" y1="156" x2="816" y2="156"/>
+
+  <!-- traveling accent square: facts -> content -> visuals -->
+  <g class="station">
+    <rect class="dot" x="59" y="151" width="10" height="10"/>
+  </g>
+
+  <!-- stations -->
+  <text class="micro" x="64" y="186">{{STATION_1}}</text>
+  <text class="micro" x="360" y="186">{{STATION_2}}</text>
+  <text class="micro" x="656" y="186">{{STATION_3}}</text>
+  <text class="microdim" x="64" y="206">{{FOOTNOTE_TAGLINE}}</text>
+</svg>

@@ -1,0 +1,35 @@
+<!-- repo-beautify hero template (outline style).
+     Fill every {{PLACEHOLDER}}; {{KEY|default}} means replace with a value or keep the default.
+     Rules (see references/visual-services.md, Self-hosted hero SVG):
+     self-contained, system font stacks only, text readable at t=0, facts from the ledger,
+     wordmark sized for <=18 chars (shrink font-size for longer names), adjust x/cx offsets
+     to your text width after substitution. -->
+<svg viewBox="0 0 880 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{{ARIA_LABEL}}">
+  <defs>
+    <linearGradient id="ol-flow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"  stop-color="#6366f1"/>
+      <stop offset="35%" stop-color="#2dd4bf"/>
+      <stop offset="70%" stop-color="#e879f9"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+      <animate attributeName="x1" values="0%;-100%" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="100%;0%" dur="6s" repeatCount="indefinite"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .ol-word { font: 800 84px system-ui, -apple-system, 'Segoe UI', sans-serif; letter-spacing: -3px;
+      fill: none; stroke: url(#ol-flow); stroke-width: 1.7; }
+    .ol-mono { font: 500 12px ui-monospace, 'SF Mono', Menlo, monospace; fill: #6f7287; letter-spacing: 3px; }
+    .ol-key { stroke: #ffffff; stroke-opacity: .08; }
+  </style>
+
+  <rect width="880" height="220" fill="#0b0b0f"/>
+  <line class="ol-key" x1="32" y1="18" x2="848" y2="18"/>
+  <line class="ol-key" x1="32" y1="202" x2="848" y2="202"/>
+
+  <text class="ol-mono" x="64" y="52">{{TOP_LABEL}}</text>
+
+  <!-- outline wordmark with flowing gradient stroke -->
+  <text class="ol-word" x="60" y="148">{{NAME}}</text>
+
+  <text class="ol-mono" x="64" y="192">{{BOTTOM_LABEL}}</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg viewBox="0 0 880 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="repo-beautify, brutalist style with scrolling ticker">
+  <defs>
+    <clipPath id="bru-tick"><rect x="6" y="166" width="868" height="48"/></clipPath>
+  </defs>
+  <style>
+    .bru-word { font: 900 74px system-ui, -apple-system, 'Segoe UI', sans-serif; letter-spacing: -3px; }
+    .bru-mono { font: 700 12px ui-monospace, 'SF Mono', Menlo, monospace; fill: #000; letter-spacing: 2.5px; }
+    .bru-ticker { font: 700 22px ui-monospace, 'SF Mono', Menlo, monospace; fill: #fff; letter-spacing: 1px; }
+    .bru-scroll { animation: bru-scroll 14s linear infinite; }
+    @keyframes bru-scroll { to { transform: translateX(-934px); } }
+  </style>
+
+  <rect width="880" height="220" fill="#ffffff"/>
+  <rect x="6" y="6" width="868" height="208" fill="none" stroke="#000" stroke-width="8"/>
+
+  <text class="bru-mono" x="40" y="52">AGENT SKILL · NO.001</text>
+  <text class="bru-mono" x="700" y="52">MIT · 2026</text>
+
+  <!-- hard-shadow stacked wordmark -->
+  <text class="bru-word" x="46" y="136" fill="#ffd400">REPO-BEAUTIFY</text>
+  <text class="bru-word" x="38" y="128" fill="#000000">REPO-BEAUTIFY</text>
+
+  <!-- ticker strip: two copies for a seamless loop -->
+  <rect x="6" y="166" width="868" height="48" fill="#000"/>
+  <g clip-path="url(#bru-tick)">
+    <g class="bru-scroll">
+      <text class="bru-ticker" x="20" y="198">FACTS · CONTENT · VISUALS · NO FAKE BADGES · EVER ·</text>
+      <text class="bru-ticker" x="954" y="198">FACTS · CONTENT · VISUALS · NO FAKE BADGES · EVER ·</text>
+    </g>
+  </g>
+</svg>

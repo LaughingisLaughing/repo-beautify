@@ -1,0 +1,33 @@
+<svg viewBox="0 0 880 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="repo-beautify, bauhaus geometric style">
+  <style>
+    .bh-word { font: 800 54px system-ui, -apple-system, 'Segoe UI', sans-serif; fill: #181511; letter-spacing: -2px; }
+    .bh-mono { font: 500 11px ui-monospace, 'SF Mono', Menlo, monospace; fill: #181511; letter-spacing: 2.5px; }
+    .bh-dim { font: 500 11px ui-monospace, 'SF Mono', Menlo, monospace; fill: #97917f; letter-spacing: 2.5px; }
+    .bh-orbiter { transform-origin: 690px 110px; animation: bh-orbit 18s linear infinite; }
+    @keyframes bh-orbit { to { transform: rotate(360deg); } }
+    .bh-tri { transform-origin: 800px 170px; animation: bh-sway 7s ease-in-out infinite alternate; }
+    @keyframes bh-sway { from { transform: rotate(-5deg); } to { transform: rotate(5deg); } }
+    .bh-breathe { transform-origin: 690px 110px; animation: bh-breathe 9s ease-in-out infinite; }
+    @keyframes bh-breathe { 0%,100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+  </style>
+
+  <rect width="880" height="220" fill="#f4f1ea"/>
+
+  <!-- geometric composition -->
+  <rect x="560" y="0" width="14" height="220" fill="#181511"/>
+  <circle class="bh-breathe" cx="690" cy="110" r="62" fill="#d63a2f"/>
+  <g class="bh-orbiter">
+    <circle cx="690" cy="34" r="13" fill="#2a4d9b"/>
+  </g>
+  <g class="bh-tri">
+    <path d="M800 124 L846 170 L754 170 Z" fill="#e8b71a"/>
+  </g>
+  <rect x="806" y="34" width="40" height="40" fill="#2a4d9b"/>
+
+  <!-- stacked lowercase wordmark -->
+  <text class="bh-word" x="64" y="92">repo·</text>
+  <text class="bh-word" x="64" y="148">beautify</text>
+
+  <text class="bh-mono" x="64" y="190">FORM FOLLOWS FACTS</text>
+  <text class="bh-dim" x="64" y="208">CONTENT · VISUALS · AGENT SKILL · 2026</text>
+</svg>

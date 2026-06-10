@@ -1,0 +1,50 @@
+<!-- repo-beautify hero template (aurora style).
+     Fill every {{PLACEHOLDER}}; {{KEY|default}} means replace with a value or keep the default.
+     Rules (see references/visual-services.md, Self-hosted hero SVG):
+     self-contained, system font stacks only, text readable at t=0, facts from the ledger,
+     wordmark sized for <=18 chars (shrink font-size for longer names), adjust x/cx offsets
+     to your text width after substitution. -->
+<svg viewBox="0 0 880 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{{ARIA_LABEL}}">
+  <defs>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="46"/>
+    </filter>
+    <radialGradient id="vig" cx="50%" cy="50%" r="75%">
+      <stop offset="55%" stop-color="#0a0c12" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0c12" stop-opacity=".9"/>
+    </radialGradient>
+    <clipPath id="frame"><rect width="880" height="220" rx="2"/></clipPath>
+  </defs>
+  <style>
+    .title-light { font: 200 58px system-ui, -apple-system, 'Segoe UI', sans-serif; fill: #f2f3f7; letter-spacing: 4px; }
+    .title-bold  { font: 700 58px system-ui, -apple-system, 'Segoe UI', sans-serif; fill: #f2f3f7; letter-spacing: 1px; }
+    .tag { font: 400 13px ui-monospace, 'SF Mono', Menlo, monospace; fill: #8b93a7; letter-spacing: 3px; }
+    .keyline { stroke: #ffffff; stroke-opacity: .09; stroke-width: 1; }
+    .blob1 { animation: drift1 16s ease-in-out infinite alternate; }
+    .blob2 { animation: drift2 21s ease-in-out infinite alternate; }
+    .blob3 { animation: drift3 26s ease-in-out infinite alternate; }
+    @keyframes drift1 { from { transform: translate(0,0) scale(1); } to { transform: translate(150px,30px) scale(1.15); } }
+    @keyframes drift2 { from { transform: translate(0,0) scale(1.1); } to { transform: translate(-130px,-24px) scale(.95); } }
+    @keyframes drift3 { from { transform: translate(0,0); } to { transform: translate(90px,-36px); } }
+    .shimmer { animation: glowpulse 7s ease-in-out infinite; }
+    @keyframes glowpulse { 0%,100% { opacity: .55; } 50% { opacity: .95; } }
+  </style>
+
+  <g clip-path="url(#frame)">
+    <rect width="880" height="220" fill="#0a0c12"/>
+
+    <!-- drifting aurora blobs -->
+    <g filter="url(#soft)">
+      <ellipse class="blob1" cx="200" cy="200" rx="240" ry="120" fill="{{BLOB_COLOR_A|#7c5cff}}" opacity=".5"/>
+      <ellipse class="blob2" cx="640" cy="20"  rx="260" ry="110" fill="{{BLOB_COLOR_B|#4361ee}}" opacity=".42"/>
+      <ellipse class="blob3" cx="760" cy="210" rx="200" ry="100" fill="{{BLOB_COLOR_C|#2dd4bf}}" opacity=".3"/>
+    </g>
+    <rect width="880" height="220" fill="url(#vig)"/>
+
+    <line class="keyline" x1="32" y1="16" x2="848" y2="16"/>
+    <line class="keyline shimmer" x1="32" y1="204" x2="848" y2="204"/>
+
+    <text x="440" y="112" text-anchor="middle"><tspan class="title-light">{{NAME_LIGHT}}</tspan><tspan class="title-bold">{{NAME_BOLD}}</tspan></text>
+    <text class="tag" x="440" y="152" text-anchor="middle">{{TAGLINE}}</text>
+  </g>
+</svg>

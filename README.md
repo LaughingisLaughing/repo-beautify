@@ -62,8 +62,43 @@ Then ask your agent, in any words:
 | `scripts/build_compare.py` | Renders README variants side-by-side with GitHub CSS (mermaid + dark mode) so you pick a style in the browser |
 | `assets/template-classic.md` | Best-README-Template lineage, contributor-oriented |
 | `assets/template-visual.md` | Hero banner, typing animation, badges, social card, mermaid, star history |
+| `assets/heroes/` | Ten self-hosted animated hero SVG templates (previews below) |
 | `references/visual-services.md` | URL recipes and pitfalls for capsule-render, typing-svg, shields, socialify, star-history |
 | `references/readme-structure.md` | Section order, per-project-type adaptation, content-merge rules |
+
+## 🎨 Hero Style Catalog
+
+Ten self-hosted hero styles ship with this skill. Each is a ~2KB animated SVG: zero JS, zero third-party requests, readable from frame 0. Pick one by name when you run the skill ("use the bauhaus hero"). Templates live in [`assets/heroes/`](assets/heroes/), the banners below are the live previews.
+
+**swiss** · paper grid, extreme weight contrast, an accent square hopping between stations
+![swiss hero preview](assets/heroes/previews/swiss.svg)
+
+**aurora** · Linear-style dark gradient, three blurred blobs drifting on async clocks
+![aurora hero preview](assets/heroes/previews/aurora.svg)
+
+**vignelli** · oversized cropped wordmark, sweeping red rule, breathing period
+![vignelli hero preview](assets/heroes/previews/vignelli.svg)
+
+**orbit** · terminal prompt with blinking cursor, satellites orbiting a source of truth
+![orbit hero preview](assets/heroes/previews/orbit.svg)
+
+**blueprint** · engineering drawing: construction grid, marching measurement line, rotating compass
+![blueprint hero preview](assets/heroes/previews/blueprint.svg)
+
+**brutalist** · thick frame, hard-shadow type, an endless ticker strip
+![brutalist hero preview](assets/heroes/previews/brutalist.svg)
+
+**dotwave** · LED dot matrix with a diagonal pulse wave
+![dotwave hero preview](assets/heroes/previews/dotwave.svg)
+
+**editorial** · literary masthead: serif title, small caps, rotating ornament
+![editorial hero preview](assets/heroes/previews/editorial.svg)
+
+**outline** · stroke-only wordmark with a flowing color gradient
+![outline hero preview](assets/heroes/previews/outline.svg)
+
+**bauhaus** · geometric primaries, an orbiting moon and a swaying triangle
+![bauhaus hero preview](assets/heroes/previews/bauhaus.svg)
 
 ## 💬 Prompts You Can Paste
 

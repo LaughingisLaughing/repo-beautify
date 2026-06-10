@@ -1,0 +1,28 @@
+<svg viewBox="0 0 880 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="repo-beautify, editorial masthead style">
+  <style>
+    .ed-caps { font: 600 12px Georgia, 'Times New Roman', serif; fill: #6e6759; letter-spacing: 5px; }
+    .ed-title { font: 400 72px Georgia, 'Times New Roman', serif; fill: #1a1812; letter-spacing: -1px; }
+    .ed-italic { font: italic 400 20px Georgia, 'Times New Roman', serif; fill: #4d473c; letter-spacing: .5px; }
+    .ed-rule { stroke: #1a1812; stroke-width: 1; }
+    .ed-thick { stroke: #1a1812; stroke-width: 3; }
+    .ed-orn { fill: #b3372f; transform-origin: 440px 196px; animation: ed-turn 14s linear infinite; }
+    @keyframes ed-turn { to { transform: rotate(360deg); } }
+    .ed-grow { transform-origin: 440px 0; animation: ed-grow 2.4s cubic-bezier(.22,1,.36,1) forwards; }
+    @keyframes ed-grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  </style>
+
+  <rect width="880" height="220" fill="#faf7f0"/>
+
+  <line class="ed-thick" x1="64" y1="26" x2="816" y2="26"/>
+  <line class="ed-rule" x1="64" y1="32" x2="816" y2="32"/>
+
+  <text class="ed-caps" x="440" y="58" text-anchor="middle">EST. 2026 · AN AGENT SKILL · MIT</text>
+
+  <text class="ed-title" x="440" y="128" text-anchor="middle">repo-beautify</text>
+  <text class="ed-italic" x="440" y="160" text-anchor="middle">Facts first, then content, then visuals.</text>
+
+  <line class="ed-rule ed-grow" x1="64" y1="182" x2="816" y2="182"/>
+
+  <!-- rotating asterisk ornament -->
+  <text class="ed-orn" x="440" y="204" text-anchor="middle" font-size="18">✱</text>
+</svg>

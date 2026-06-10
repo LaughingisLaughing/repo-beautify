@@ -1,0 +1,51 @@
+<!-- repo-beautify hero template (orbit style).
+     Fill every {{PLACEHOLDER}}; {{KEY|default}} means replace with a value or keep the default.
+     Rules (see references/visual-services.md, Self-hosted hero SVG):
+     self-contained, system font stacks only, text readable at t=0, facts from the ledger,
+     wordmark sized for <=18 chars (shrink font-size for longer names), adjust x/cx offsets
+     to your text width after substitution. -->
+<svg viewBox="0 0 880 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{{ARIA_LABEL}}">
+  <style>
+    .term { font: 600 38px ui-monospace, 'SF Mono', Menlo, monospace; fill: #e6edf3; letter-spacing: -1px; }
+    .prompt { fill: #6366f1; }
+    .tag { font: 400 13px ui-monospace, 'SF Mono', Menlo, monospace; fill: #7d8590; letter-spacing: 1.5px; }
+    .microdim { font: 500 11px ui-monospace, 'SF Mono', Menlo, monospace; fill: #484f58; letter-spacing: 2.5px; }
+    .orbit { fill: none; stroke: #30363d; stroke-width: 1; }
+    .orbit-accent { fill: none; stroke: #6366f1; stroke-width: 1.4; stroke-dasharray: 6 7; animation: spin 9s linear infinite; }
+    @keyframes spin { to { stroke-dashoffset: -130; } }
+    .cursor { fill: #6366f1; animation: blink 1.1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    .node { fill: #e6edf3; }
+    .nodeglow { fill: #6366f1; opacity: .9; }
+  </style>
+
+  <rect width="880" height="220" fill="#0d1117"/>
+  <rect x="0.5" y="0.5" width="879" height="219" fill="none" stroke="#30363d"/>
+
+  <!-- terminal wordmark -->
+  <text class="term" x="64" y="106"><tspan class="prompt">$ </tspan>{{NAME}}</text>
+  <rect class="cursor" x="412" y="78" width="17" height="34"/>
+  <text class="tag" x="64" y="146">{{TAGLINE}}</text>
+  <text class="microdim" x="64" y="184">{{MICRO_LABEL}}</text>
+
+  <!-- orbital system: skills syncing around one source of truth -->
+  <g transform="translate(700,110)">
+    <ellipse class="orbit" rx="132" ry="52" transform="rotate(-14)"/>
+    <ellipse class="orbit" rx="96" ry="38" transform="rotate(-14)"/>
+    <ellipse class="orbit-accent" rx="64" ry="25" transform="rotate(-14)"/>
+
+    <!-- center: source of truth -->
+    <circle class="nodeglow" r="5"/>
+    <circle fill="none" stroke="#6366f1" stroke-opacity=".35" r="10"/>
+
+    <!-- satellites traveling the orbits -->
+    <circle class="node" r="3.2">
+      <animateMotion dur="8s" repeatCount="indefinite"
+        path="M 128.07,-31.93 A 132,52 -14 1 1 -128.07,31.93 A 132,52 -14 1 1 128.07,-31.93"/>
+    </circle>
+    <circle class="node" r="2.6">
+      <animateMotion dur="13s" repeatCount="indefinite"
+        path="M -93.13,23.22 A 96,38 -14 1 1 93.13,-23.22 A 96,38 -14 1 1 -93.13,23.22"/>
+    </circle>
+  </g>
+</svg>

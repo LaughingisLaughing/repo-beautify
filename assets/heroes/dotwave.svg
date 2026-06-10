@@ -1,0 +1,93 @@
+<!-- repo-beautify hero template (dotwave style).
+     Fill every {{PLACEHOLDER}}; {{KEY|default}} means replace with a value or keep the default.
+     Rules (see references/visual-services.md, Self-hosted hero SVG):
+     self-contained, system font stacks only, text readable at t=0, facts from the ledger,
+     wordmark sized for <=18 chars (shrink font-size for longer names), adjust x/cx offsets
+     to your text width after substitution. -->
+<svg viewBox="0 0 880 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{{ARIA_LABEL}}">
+  <style>
+    .dw-light { font: 200 50px system-ui, -apple-system, 'Segoe UI', sans-serif; fill: #e8eaf2; letter-spacing: 0px; }
+    .dw-bold  { font: 700 50px system-ui, -apple-system, 'Segoe UI', sans-serif; fill: #e8eaf2; letter-spacing: -1px; }
+    .dw-mono { font: 400 12px ui-monospace, 'SF Mono', Menlo, monospace; fill: #767e93; letter-spacing: 2.5px; }
+    .dw-dot { fill: #3a4356; animation: dw-pulse 3.6s ease-in-out infinite; }
+    @keyframes dw-pulse {
+      0%, 100% { fill: #3a4356; r: 3; }
+      50%      { fill: #818cf8; r: 5; }
+    }
+  </style>
+
+  <rect width="880" height="220" fill="#101418"/>
+
+  <!-- dot matrix, wave phase travels diagonally -->
+  <g>
+    <circle class="dw-dot" cx="420" cy="42" r="3" style="animation-delay:0.0s"/>
+    <circle class="dw-dot" cx="454" cy="42" r="3" style="animation-delay:0.14s"/>
+    <circle class="dw-dot" cx="488" cy="42" r="3" style="animation-delay:0.28s"/>
+    <circle class="dw-dot" cx="522" cy="42" r="3" style="animation-delay:0.42s"/>
+    <circle class="dw-dot" cx="556" cy="42" r="3" style="animation-delay:0.56s"/>
+    <circle class="dw-dot" cx="590" cy="42" r="3" style="animation-delay:0.7s"/>
+    <circle class="dw-dot" cx="624" cy="42" r="3" style="animation-delay:0.84s"/>
+    <circle class="dw-dot" cx="658" cy="42" r="3" style="animation-delay:0.98s"/>
+    <circle class="dw-dot" cx="692" cy="42" r="3" style="animation-delay:1.12s"/>
+    <circle class="dw-dot" cx="726" cy="42" r="3" style="animation-delay:1.26s"/>
+    <circle class="dw-dot" cx="760" cy="42" r="3" style="animation-delay:1.4s"/>
+    <circle class="dw-dot" cx="794" cy="42" r="3" style="animation-delay:1.54s"/>
+    <circle class="dw-dot" cx="828" cy="42" r="3" style="animation-delay:1.68s"/>
+    <circle class="dw-dot" cx="420" cy="76" r="3" style="animation-delay:0.14s"/>
+    <circle class="dw-dot" cx="454" cy="76" r="3" style="animation-delay:0.28s"/>
+    <circle class="dw-dot" cx="488" cy="76" r="3" style="animation-delay:0.42s"/>
+    <circle class="dw-dot" cx="522" cy="76" r="3" style="animation-delay:0.56s"/>
+    <circle class="dw-dot" cx="556" cy="76" r="3" style="animation-delay:0.7s"/>
+    <circle class="dw-dot" cx="590" cy="76" r="3" style="animation-delay:0.84s"/>
+    <circle class="dw-dot" cx="624" cy="76" r="3" style="animation-delay:0.98s"/>
+    <circle class="dw-dot" cx="658" cy="76" r="3" style="animation-delay:1.12s"/>
+    <circle class="dw-dot" cx="692" cy="76" r="3" style="animation-delay:1.26s"/>
+    <circle class="dw-dot" cx="726" cy="76" r="3" style="animation-delay:1.4s"/>
+    <circle class="dw-dot" cx="760" cy="76" r="3" style="animation-delay:1.54s"/>
+    <circle class="dw-dot" cx="794" cy="76" r="3" style="animation-delay:1.68s"/>
+    <circle class="dw-dot" cx="828" cy="76" r="3" style="animation-delay:1.82s"/>
+    <circle class="dw-dot" cx="420" cy="110" r="3" style="animation-delay:0.28s"/>
+    <circle class="dw-dot" cx="454" cy="110" r="3" style="animation-delay:0.42s"/>
+    <circle class="dw-dot" cx="488" cy="110" r="3" style="animation-delay:0.56s"/>
+    <circle class="dw-dot" cx="522" cy="110" r="3" style="animation-delay:0.7s"/>
+    <circle class="dw-dot" cx="556" cy="110" r="3" style="animation-delay:0.84s"/>
+    <circle class="dw-dot" cx="590" cy="110" r="3" style="animation-delay:0.98s"/>
+    <circle class="dw-dot" cx="624" cy="110" r="3" style="animation-delay:1.12s"/>
+    <circle class="dw-dot" cx="658" cy="110" r="3" style="animation-delay:1.26s"/>
+    <circle class="dw-dot" cx="692" cy="110" r="3" style="animation-delay:1.4s"/>
+    <circle class="dw-dot" cx="726" cy="110" r="3" style="animation-delay:1.54s"/>
+    <circle class="dw-dot" cx="760" cy="110" r="3" style="animation-delay:1.68s"/>
+    <circle class="dw-dot" cx="794" cy="110" r="3" style="animation-delay:1.82s"/>
+    <circle class="dw-dot" cx="828" cy="110" r="3" style="animation-delay:1.96s"/>
+    <circle class="dw-dot" cx="420" cy="144" r="3" style="animation-delay:0.42s"/>
+    <circle class="dw-dot" cx="454" cy="144" r="3" style="animation-delay:0.56s"/>
+    <circle class="dw-dot" cx="488" cy="144" r="3" style="animation-delay:0.7s"/>
+    <circle class="dw-dot" cx="522" cy="144" r="3" style="animation-delay:0.84s"/>
+    <circle class="dw-dot" cx="556" cy="144" r="3" style="animation-delay:0.98s"/>
+    <circle class="dw-dot" cx="590" cy="144" r="3" style="animation-delay:1.12s"/>
+    <circle class="dw-dot" cx="624" cy="144" r="3" style="animation-delay:1.26s"/>
+    <circle class="dw-dot" cx="658" cy="144" r="3" style="animation-delay:1.4s"/>
+    <circle class="dw-dot" cx="692" cy="144" r="3" style="animation-delay:1.54s"/>
+    <circle class="dw-dot" cx="726" cy="144" r="3" style="animation-delay:1.68s"/>
+    <circle class="dw-dot" cx="760" cy="144" r="3" style="animation-delay:1.82s"/>
+    <circle class="dw-dot" cx="794" cy="144" r="3" style="animation-delay:1.96s"/>
+    <circle class="dw-dot" cx="828" cy="144" r="3" style="animation-delay:2.1s"/>
+    <circle class="dw-dot" cx="420" cy="178" r="3" style="animation-delay:0.56s"/>
+    <circle class="dw-dot" cx="454" cy="178" r="3" style="animation-delay:0.7s"/>
+    <circle class="dw-dot" cx="488" cy="178" r="3" style="animation-delay:0.84s"/>
+    <circle class="dw-dot" cx="522" cy="178" r="3" style="animation-delay:0.98s"/>
+    <circle class="dw-dot" cx="556" cy="178" r="3" style="animation-delay:1.12s"/>
+    <circle class="dw-dot" cx="590" cy="178" r="3" style="animation-delay:1.26s"/>
+    <circle class="dw-dot" cx="624" cy="178" r="3" style="animation-delay:1.4s"/>
+    <circle class="dw-dot" cx="658" cy="178" r="3" style="animation-delay:1.54s"/>
+    <circle class="dw-dot" cx="692" cy="178" r="3" style="animation-delay:1.68s"/>
+    <circle class="dw-dot" cx="726" cy="178" r="3" style="animation-delay:1.82s"/>
+    <circle class="dw-dot" cx="760" cy="178" r="3" style="animation-delay:1.96s"/>
+    <circle class="dw-dot" cx="794" cy="178" r="3" style="animation-delay:2.1s"/>
+    <circle class="dw-dot" cx="828" cy="178" r="3" style="animation-delay:2.24s"/>
+  </g>
+
+  <text x="64" y="105"><tspan class="dw-light">{{NAME_LIGHT}}</tspan><tspan class="dw-bold">{{NAME_BOLD}}</tspan></text>
+  <text class="dw-mono" x="64" y="146">{{TAGLINE_1}}</text>
+  <text class="dw-mono" x="64" y="178">{{TAGLINE_2}}</text>
+</svg>

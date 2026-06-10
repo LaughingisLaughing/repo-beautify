@@ -4,7 +4,24 @@ URL recipes for the battle-tested services this skill composes. All render nativ
 
 ## Self-hosted hero SVG (preferred for the top banner)
 
-A hand-crafted animated SVG committed to the repo beats third-party banner services on every axis: ~2KB vs an external request, unique design vs a template look, and no uptime dependency. Start from `assets/hero-swiss-template.svg` (Swiss Grid style, HyperFrames design-guide lineage) and follow these rules:
+A hand-crafted animated SVG committed to the repo beats third-party banner services on every axis: ~2KB vs an external request, unique design vs a template look, and no uptime dependency.
+
+**Style catalog** (templates in `assets/heroes/<style>.svg`, branded previews in `assets/heroes/previews/`). Let the user pick by name; if they have not chosen, suggest 2-3 that fit the project's temperament:
+
+| style | look | best for |
+| --- | --- | --- |
+| `swiss` | paper grid, weight contrast, hopping accent square | editorial restraint, long-lived tools |
+| `aurora` | dark drifting gradient blobs | dark-mode-first, product-brand repos |
+| `vignelli` | oversized cropped type, red rule | bold statements, design-adjacent projects |
+| `orbit` | terminal prompt, orbiting satellites | CLIs and dev tools |
+| `blueprint` | engineering drawing, marching dashes | infra, build systems, specs |
+| `brutalist` | thick frame, hard shadow, ticker strip | opinionated tools, manifestos |
+| `dotwave` | LED matrix pulse wave | data, signals, monitoring |
+| `editorial` | serif masthead, small caps | docs, writing, knowledge bases |
+| `outline` | stroke-only type, flowing gradient | modern type-driven landing vibes |
+| `bauhaus` | geometric primaries in motion | playful-but-disciplined projects |
+
+Rules for filling a template (and for designing new ones):
 
 - **Self-contained**: CSS keyframes / SMIL only, no JS, no external fonts or images. SVG loaded via `<img>` (GitHub camo) cannot fetch ANY external resource; use system font stacks (`system-ui`, `ui-monospace`) and accept minor cross-platform variance.
 - **Readable at t=0**: text fully visible on the first frame; animation is ambient decoration (a traveling accent, a drawing line), never a fade-in reveal. Headless screenshots freeze SVG-in-img at frame 0, and so do some RSS readers.

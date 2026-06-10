@@ -1,0 +1,37 @@
+<svg viewBox="0 0 880 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="repo-beautify: verified storefronts">
+  <defs>
+    <clipPath id="crop"><rect width="880" height="220"/></clipPath>
+  </defs>
+  <style>
+    .giant { font: 800 148px system-ui, -apple-system, 'Segoe UI', sans-serif; fill: #121212; letter-spacing: -7px; }
+    .micro { font: 500 12px ui-monospace, 'SF Mono', Menlo, monospace; fill: #121212; letter-spacing: 2.5px; }
+    .microdim { font: 500 12px ui-monospace, 'SF Mono', Menlo, monospace; fill: #9b9b9b; letter-spacing: 2.5px; }
+    .bar { fill: #e8442e; transform-origin: 64px 0; animation: sweep 9s cubic-bezier(.77,0,.18,1) infinite; }
+    @keyframes sweep {
+      0%        { transform: scaleX(0); }
+      14%, 86%  { transform: scaleX(1); }
+      100%      { transform: scaleX(0); }
+    }
+    .period { fill: #e8442e; transform-origin: 793px 187px; animation: breathe 4.5s ease-in-out infinite; }
+    @keyframes breathe { 0%,100% { transform: scale(1); } 50% { transform: scale(1.28); } }
+  </style>
+
+  <g clip-path="url(#crop)">
+    <rect width="880" height="220" fill="#ffffff"/>
+
+    <!-- top meta row -->
+    <text class="micro" x="64" y="42">REPO-BEAUTIFY</text>
+    <text class="microdim" x="430" y="42">AGENT SKILL</text>
+    <text class="microdim" x="700" y="42">EST. 2026 · MIT</text>
+
+    <!-- red rule sweeps in -->
+    <rect class="bar" x="64" y="58" width="752" height="7"/>
+
+    <!-- oversized cropped wordmark, descenders bleed off-frame -->
+    <text class="giant" x="56" y="187">beautify</text>
+    <circle class="period" cx="793" cy="187" r="14"/>
+
+    <!-- bottom-right footnote -->
+    <text class="microdim" x="816" y="120" text-anchor="end">FACTS / CONTENT / VISUALS</text>
+  </g>
+</svg>
