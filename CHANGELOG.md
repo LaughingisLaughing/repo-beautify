@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.5.0] - 2026-06-11
+### Added
+- Publish-safety audit (SKILL.md step 6, optional): `scripts/publish_audit.py` scans tracked files and full git history for secret formats (AWS/GitHub/Slack/OpenAI/Anthropic/OpenRouter/Google/Stripe/JWT/private keys), risky tracked filenames, absolute home paths, private network references, and personal author emails; delegates to `gitleaks` when installed. Exit 1 on blockers.
+- `references/publish-safety.md`: triage guide (rotate-then-purge for leaked secrets, `git filter-repo` history rewrites, GitHub noreply emails, what not to fix) plus a pre-publish checklist.
+- New "Audit before open-sourcing" prompt in both README editions.
+
 ## [0.4.1] - 2026-06-11
 ### Changed
 - Chinese edition typography rules hardened in `references/bilingual-readme.md`: corner brackets 「」 for quotes, full-width punctuation throughout Chinese prose (with the bold-marker colon pitfall called out), a residual-punctuation lint command, and stronger anti-translationese guidance.

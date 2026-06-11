@@ -63,12 +63,14 @@ npx skills add LaughingisLaughing/repo-beautify
 | `scripts/scan_repo.sh` | 门面事实扫描器：manifest 缺什么字段、license、registry 发布状态、GitHub 简介和 topics、社区文件、demo 素材 |
 | `scripts/build_compare.py` | 用 GitHub 样式并排渲染多个 README 方案（带 mermaid 和暗色模式），在浏览器里挑风格 |
 | `scripts/check_bilingual.py` | 中英双语 README 的对齐校验器：命令块、链接、图片、标题数必须一一对应 |
+| `scripts/publish_audit.py` | 发布安全审计：密钥、危险文件、本地路径、私人邮箱，覆盖工作区和完整 git 历史 |
 | `assets/template-classic.md` | Best-README-Template 一脉的经典结构，面向贡献者 |
 | `assets/template-visual.md` | 横幅、打字动效、徽章、社交卡片、mermaid、star 趋势 |
 | `assets/heroes/` | 10 款自托管动画 hero SVG 模板（预览见下方画廊） |
 | `references/visual-services.md` | capsule-render、typing-svg、shields、socialify、star-history 的 URL 配方和踩坑记录 |
 | `references/readme-structure.md` | 章节顺序、按项目类型适配、内容合并规则 |
 | `references/bilingual-readme.md` | 中文版 README 的翻译边界、语气规范和校验流程 |
+| `references/publish-safety.md` | 审计结果处置指南：先轮换再清史、历史改写、哪些不用修 |
 
 ## 🎨 Hero 风格目录
 
@@ -129,6 +131,15 @@ npx skills add LaughingisLaughing/repo-beautify
 
 ```text
 只执行 repo-beautify 的第 5 步：审计这个仓库的 GitHub 简介、topics、manifest 字段、releases 和社区文件，缺什么补什么。README 保持不动。
+```
+
+</details>
+
+<details>
+<summary><b>开源前安全审计</b></summary>
+
+```text
+对这个仓库执行 repo-beautify 的发布安全审计，包含 git 历史。逐条分诊审计结果，告诉我哪些是阻断项，并带我在公开仓库之前把它们修完。
 ```
 
 </details>

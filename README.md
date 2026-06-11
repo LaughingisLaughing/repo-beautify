@@ -63,12 +63,14 @@ Then ask your agent, in any words:
 | `scripts/scan_repo.sh` | Storefront fact scanner: manifest gaps, license, registry publish status, GitHub description/topics, community files, demo assets |
 | `scripts/build_compare.py` | Renders README variants side-by-side with GitHub CSS (mermaid + dark mode) so you pick a style in the browser |
 | `scripts/check_bilingual.py` | Parity checker for bilingual READMEs: code blocks, links, images, and heading counts must line up |
+| `scripts/publish_audit.py` | Publish-safety audit: secrets, risky files, home paths, personal emails, across the tree and full git history |
 | `assets/template-classic.md` | Best-README-Template lineage, contributor-oriented |
 | `assets/template-visual.md` | Hero banner, typing animation, badges, social card, mermaid, star history |
 | `assets/heroes/` | Ten self-hosted animated hero SVG templates (previews below) |
 | `references/visual-services.md` | URL recipes and pitfalls for capsule-render, typing-svg, shields, socialify, star-history |
 | `references/readme-structure.md` | Section order, per-project-type adaptation, content-merge rules |
 | `references/bilingual-readme.md` | Translation boundaries, tone, and validation flow for the Chinese edition |
+| `references/publish-safety.md` | Triage guide for audit findings: rotate-then-purge, history rewrites, what not to fix |
 
 ## 🎨 Hero Style Catalog
 
@@ -129,6 +131,15 @@ Use repo-beautify to generate classic and visual README variants for this repo a
 
 ```text
 Use repo-beautify step 5 only: audit this repo's GitHub description, topics, manifest fields, releases, and community files, and fix what is missing. Leave the README alone.
+```
+
+</details>
+
+<details>
+<summary><b>Audit before open-sourcing</b></summary>
+
+```text
+Run the repo-beautify publish-safety audit on this repository, including git history. Triage every finding, tell me which ones are blockers, and walk me through fixing them before I make the repo public.
 ```
 
 </details>
