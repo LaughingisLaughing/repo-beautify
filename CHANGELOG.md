@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.4.1] - 2026-06-11
+### Changed
+- Chinese edition typography rules hardened in `references/bilingual-readme.md`: corner brackets 「」 for quotes, full-width punctuation throughout Chinese prose (with the bold-marker colon pitfall called out), a residual-punctuation lint command, and stronger anti-translationese guidance.
+- `README.zh-CN.md` reworked accordingly: full-width punctuation, corner-bracket quotes, and more natural phrasing (reviewed jointly with DeepSeek).
+
 ## [0.4.0] - 2026-06-11
 ### Added
 - Chinese edition workflow (SKILL.md step 6): generate a parity-checked `README.zh-CN.md` in the same repo, with `references/bilingual-readme.md` covering translation boundaries (commands/code byte-identical, prose localized), tone rules, anchor handling, and maintenance.

@@ -22,12 +22,28 @@ How to generate a `README.zh-CN.md` in the same repo, localized rather than word
 
 **Exception**: fenced blocks tagged `text` that contain natural-language prompts MAY be localized (agents accept Chinese prompts), but keep the same number of blocks in the same order.
 
-## Tone rules for the Chinese edition
+## Tone and punctuation rules for the Chinese edition
 
-- 技术中文:简洁、直接、主动语态,避免翻译腔("运行这条命令"而不是"这条命令可以被运行")。
-- 不要营销腔;原文克制,译文也克制。
-- 标点使用中文全角标点;范围用半角连字符(如 1-10)。
-- 中英文之间留一个空格(如 "在 GitHub 上")。
+写作语气:
+- 技术中文,简洁、直接、主动语态。落笔前先想「中国工程师会怎么说这句话」,再写,而不是对着英文直译。读起来像翻译的句子(被动语态堆叠、"进行""作出"类壳动词、定语从句直搬)必须重写。
+- 不要营销腔。原文克制,译文也克制。
+
+标点(硬性规定,逐条检查):
+- 引号一律用直角引号「」,嵌套用『』。不用 "" '' 也不用 "" 。
+- 中文语境内的逗号、句号、冒号、分号、括号、顿号全部用全角:,。:;()、。**特别注意两个高频漏网处**:加粗标记后的冒号(`**规则**:` 的冒号两侧是星号和数字,容易漏)和列表项内的短句逗号。
+- 半角标点只允许出现在:代码块、行内代码、URL、文件路径、markdown 语法本身(链接括号、徽章)。
+- 范围用半角连字符(如 1-10);中英文之间留一个空格(如「在 GitHub 上」)。
+
+生成后用这条命令找残留半角标点(命中即修,markdown 链接路径的括号除外):
+
+```bash
+python3 -c "
+import re,sys
+src=open('README.zh-CN.md',encoding='utf-8').read()
+src=re.sub(r'\`\`\`(?!text)\w*\n.*?\`\`\`','',src,flags=re.S)
+src=re.sub(r'\`[^\`]*\`|!?\[[^\]]*\]\([^)]*\)|https?://\S+|<[^>]+>','',src)
+print([m.group() for m in re.finditer(r'[一-鿿][,;:()\"]|[,;:()\"][一-鿿]',src)] or '清洁')"
+```
 
 ## Anchors and internal links
 
