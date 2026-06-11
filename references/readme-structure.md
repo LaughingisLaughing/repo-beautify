@@ -41,7 +41,7 @@ When the user has not picked, either ask with the one-line tradeoff above, or ge
 
 ## Bilingual READMEs (optional, not a default)
 
-Only when the project's audience justifies it: keep `README.md` (English) as canonical, add `README.zh-CN.md`, and put a one-line language switcher at the top of both (`English | [简体中文](README.zh-CN.md)`). Mirror section anchors so cross-links work. Treat this as a storefront add-on, not part of every makeover.
+Only when the project's audience justifies it: keep `README.md` (English) as canonical and add `README.zh-CN.md` with a language switcher in both files. The full recipe (translation boundaries, tone, anchors, parity validation) lives in `references/bilingual-readme.md`; validate with `scripts/check_bilingual.py`.
 
 ## Writing tone
 

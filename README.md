@@ -13,6 +13,8 @@
 
 </div>
 
+<p align="center">English | <a href="README.zh-CN.md">简体中文</a></p>
+
 ---
 
 ## 🧭 The Problem
@@ -60,11 +62,13 @@ Then ask your agent, in any words:
 | `SKILL.md` | The workflow and the hard rules (fact ledger, no fabrication, docs must survive re-skinning) |
 | `scripts/scan_repo.sh` | Storefront fact scanner: manifest gaps, license, registry publish status, GitHub description/topics, community files, demo assets |
 | `scripts/build_compare.py` | Renders README variants side-by-side with GitHub CSS (mermaid + dark mode) so you pick a style in the browser |
+| `scripts/check_bilingual.py` | Parity checker for bilingual READMEs: code blocks, links, images, and heading counts must line up |
 | `assets/template-classic.md` | Best-README-Template lineage, contributor-oriented |
 | `assets/template-visual.md` | Hero banner, typing animation, badges, social card, mermaid, star history |
 | `assets/heroes/` | Ten self-hosted animated hero SVG templates (previews below) |
 | `references/visual-services.md` | URL recipes and pitfalls for capsule-render, typing-svg, shields, socialify, star-history |
 | `references/readme-structure.md` | Section order, per-project-type adaptation, content-merge rules |
+| `references/bilingual-readme.md` | Translation boundaries, tone, and validation flow for the Chinese edition |
 
 ## 🎨 Hero Style Catalog
 

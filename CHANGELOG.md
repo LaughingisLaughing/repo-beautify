@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.4.0] - 2026-06-11
+### Added
+- Chinese edition workflow (SKILL.md step 6): generate a parity-checked `README.zh-CN.md` in the same repo, with `references/bilingual-readme.md` covering translation boundaries (commands/code byte-identical, prose localized), tone rules, anchor handling, and maintenance.
+- `scripts/check_bilingual.py`: bilingual parity checker enforcing identical command/mermaid blocks, matching URL/image sets, equal heading counts, and language switchers in both files.
+- Dogfood: this repo now ships `README.zh-CN.md` with a language switcher on both editions.
+
+### Changed
+- Skill trigger description now fires on 中文 README / 双语 README / bilingual README / README.zh-CN.
+
 ## [0.3.0] - 2026-06-11
 ### Added
 - Hero style catalog: ten self-hosted animated SVG hero templates in `assets/heroes/` (swiss, aurora, vignelli, orbit, blueprint, brutalist, dotwave, editorial, outline, bauhaus), each with a branded preview in `assets/heroes/previews/` and a live gallery in the README.

@@ -1,6 +1,6 @@
 ---
 name: repo-beautify
-description: "Use when the user asks to beautify, redesign, polish, or professionalize a GitHub repo storefront/README; compare README styles; improve repo metadata, topics, social preview, or package manifest; or says README 美化, 美化仓库, 仓库门面, repo 门面, 项目主页包装, 徽章, badges, social card, star history. Covers README visual redesign (hero banner, badges, mermaid diagrams, collapsible docs), GitHub description/topics, and manifest enrichment, all fact-verified. Do NOT use for GitHub profile READMEs, full API docs, CONTRIBUTING generation, or GitHub Pages sites."
+description: "Use when the user asks to beautify, redesign, polish, or professionalize a GitHub repo storefront/README; compare README styles; improve repo metadata, topics, social preview, or package manifest; add a Chinese edition of the README; or says README 美化, 美化仓库, 仓库门面, repo 门面, 项目主页包装, 徽章, badges, social card, star history, 中文 README, 中文介绍页, 双语 README, bilingual README, README.zh-CN. Covers README visual redesign (hero banner, badges, mermaid diagrams, collapsible docs), GitHub description/topics, manifest enrichment, and parity-checked Chinese editions, all fact-verified. Do NOT use for GitHub profile READMEs, full API docs, CONTRIBUTING generation, or GitHub Pages sites."
 ---
 
 # Repo Beautify
@@ -59,9 +59,18 @@ Read `references/visual-services.md` for exact URL recipes and pitfalls. For the
 - **Releases**: if the ledger shows no tags, suggest tagging the current version; a Releases page is part of the storefront.
 - **Social preview**: suggest the socialify image for Settings → Social preview. This is a manual upload; do not claim an API can set it.
 - **Community files**: link existing CONTRIBUTING / CODE_OF_CONDUCT / SECURITY; if absent, suggest (do not generate, out of scope).
-- **Bilingual README** (optional, only when the audience justifies it): `README.zh-CN.md` plus a language switcher line at the top of both files.
 
-### 6. Versioning
+### 6. Chinese edition (on request, or when the audience justifies it)
+
+Generate `README.zh-CN.md` in the same repo following `references/bilingual-readme.md`: localize prose and headings, keep every command/config/mermaid code block byte-identical, reuse the hero SVG, never translate project names, commands, paths, or URLs. Add the language switcher line to BOTH files. Then validate:
+
+```bash
+python3 scripts/check_bilingual.py README.md README.zh-CN.md
+```
+
+Fix any reported drift in the markdown (never by loosening the checker). Re-run this check whenever `README.md` changes later.
+
+### 7. Versioning
 
 README-only changes are docs-only (no version bump). If the manifest was touched (step 5), bump PATCH and add a Keep-a-Changelog entry.
 
