@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.5.1] - 2026-06-15
+### Fixed
+- Star History chart showed a broken-image icon: star-history embeds the owner avatar as an external `<image href>` for low-star repos, which GitHub's `<img>` secure-static-mode blocks. Removed the (empty, ~0-star) Star History section from both README editions.
+- Hardened the skill so it stops generating this: `references/visual-services.md` now documents the secure-static-mode avatar breakage and the mixed-case 301-redirect pitfall, advises skipping star-history under ~50 stars, and adds a `grep -c 'href="http'` self-check; `assets/template-visual.md` switches to lowercase `OWNER`/`REPO` and carries an omit-when-sparse note.
+
 ## [0.5.0] - 2026-06-11
 ### Added
 - Publish-safety audit (SKILL.md step 6, optional): `scripts/publish_audit.py` scans tracked files and full git history for secret formats (AWS/GitHub/Slack/OpenAI/Anthropic/OpenRouter/Google/Stripe/JWT/private keys), risky tracked filenames, absolute home paths, private network references, and personal author emails; delegates to `gitleaks` when installed. Exit 1 on blockers.

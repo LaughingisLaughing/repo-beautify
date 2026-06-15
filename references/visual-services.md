@@ -75,7 +75,9 @@ https://api.star-history.com/svg?repos=OWNER/REPO&type=Date&theme=dark
 ```
 
 - Wrap in a link to `https://star-history.com/#OWNER/REPO&Date`
-- Near-empty for 0-star repos; keep as a footer element, never present as traction
+- **Skip this section entirely for repos under ~50 stars.** Two compounding reasons: (1) the chart is near-empty and reads as "no traction"; (2) star-history embeds the repo owner's avatar inside the SVG, and for new/low-star repos its server often leaves that avatar as an EXTERNAL `<image href="https://avatars.githubusercontent.com/...">` instead of inlining it as base64. GitHub renders README SVGs via `<img>` in "secure static mode", which blocks all external resource loads, so the avatar shows as a broken-image icon next to the "Star History" title. Verified failure mode, not transient.
+- **Use the lowercase `owner/repo`** in the URL. star-history 301-redirects mixed-case names to lowercase, and GitHub's camo image proxy does not follow redirects (whole chart breaks).
+- Before shipping it, confirm the chart is self-contained: `curl -sL "<svg-url>" | grep -c 'href="http'` must be `0`. Any external `href` inside means a guaranteed broken icon under `<img>`.
 
 ## mermaid (architecture diagram) — built into GitHub
 

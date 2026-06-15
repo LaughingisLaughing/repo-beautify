@@ -58,11 +58,14 @@
 
 {{CAVEATS_FROM_ORIGINAL_DOCS}}
 
+<!-- Star History: OMIT this whole section for repos under ~50 stars. The chart reads as
+     "no traction" when sparse AND its embedded owner avatar breaks under GitHub's <img>
+     secure static mode for low-star repos. Use lowercase owner/repo. See visual-services.md. -->
 ## ⭐ Star History
 
 <div align="center">
-<a href="https://star-history.com/#{{OWNER}}/{{REPO}}&Date">
-  <img src="https://api.star-history.com/svg?repos={{OWNER}}/{{REPO}}&type=Date&theme=dark" alt="Star History Chart" width="600"/>
+<a href="https://star-history.com/#{{OWNER_LOWER}}/{{REPO_LOWER}}&Date">
+  <img src="https://api.star-history.com/svg?repos={{OWNER_LOWER}}/{{REPO_LOWER}}&type=Date&theme=dark" alt="Star History Chart" width="600"/>
 </a>
 </div>
 

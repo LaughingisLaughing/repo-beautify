@@ -157,14 +157,6 @@ npx skills add LaughingisLaughing/repo-beautify
 - 无头截图会把 SVG 动画定格在第 0 帧。验证横幅要用 `curl | grep '<text'`，别信截图。
 - GitHub 用 camo 代理缓存 README 图片，改了图片 URL 之后，线上要过一阵子才会刷新。
 
-## ⭐ Star 趋势
-
-<div align="center">
-<a href="https://star-history.com/#LaughingisLaughing/repo-beautify&Date">
-  <img src="https://api.star-history.com/svg?repos=LaughingisLaughing/repo-beautify&type=Date&theme=dark" alt="Star History 图表" width="600"/>
-</a>
-</div>
-
 ---
 
 <div align="center">

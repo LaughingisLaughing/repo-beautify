@@ -157,14 +157,6 @@ Run the repo-beautify publish-safety audit on this repository, including git his
 - Headless screenshots freeze SVG animations at frame 0; verify banners via `curl | grep '<text'`, not screenshots.
 - GitHub caches README images through camo; expect propagation delay after URL changes.
 
-## ⭐ Star History
-
-<div align="center">
-<a href="https://star-history.com/#LaughingisLaughing/repo-beautify&Date">
-  <img src="https://api.star-history.com/svg?repos=LaughingisLaughing/repo-beautify&type=Date&theme=dark" alt="Star History Chart" width="600"/>
-</a>
-</div>
-
 ---
 
 <div align="center">
